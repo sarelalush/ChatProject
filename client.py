@@ -16,7 +16,7 @@ def main():
                 print(f'{from_server}')
             else:
                 message = readable.readline().strip().encode()
-                protocol_write_message(readable,message)
+                protocol_write_message(client,message)
                 if message == b'exit':
                     finished = True
     client.shutdown(socket.SHUT_RDWR)
